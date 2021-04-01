@@ -1,6 +1,6 @@
-# gerenciador-de-tarefas
+# Gerenciador de Tarefas
 
-Itens implementados:
+**Itens implementados:**
 
 a) JSF
 
@@ -10,14 +10,14 @@ c) JPA
 
 f) Spring boot e Primefaces
 
-Execução local
+**Execução local**
 No arquivo src/main/resources/aplication.properties mudar o valor do atributo ``spring.profiles.active`` de ``prod`` para ``local``
 
-Acessar ``localhost:8081/h2-console``
+**Acessar** ``localhost:8081/h2-console``
 
-Informar usuário ``sa`` e senha ``password``
+**Informar usuário** ``sa`` e senha ``password``
 
-Executar o script:
+**Executar o script:**
 
 ``` DROP TABLE IF EXISTS tarefas;
 
@@ -45,6 +45,6 @@ INSERT INTO tarefas (titulo, descricao, responsavel, prioridade, deadline) VALUE
   ``` 
   
   
-Clicar com o botão direito do mouse no arquivo ``src/main/java/com.sistema.gerenciador.GerenciadorDeTarefasApplication`` e executar como Java Application
+**Clicar com o botão direito do mouse no arquivo ``src/main/java/com.sistema.gerenciador.GerenciadorDeTarefasApplication`` e executar como Java Application**
 
-Acessar a aplicação em localhost:8081/pages/index.jsf
+**Acessar a aplicação em ``localhost:8081/pages/index.jsf``**
