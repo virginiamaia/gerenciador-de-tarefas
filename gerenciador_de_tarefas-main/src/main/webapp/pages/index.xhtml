@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Cadastro de Tarefas</title>
+</h:head>
+<h:body>
+
+	<p:fieldset legend="Cadastrar Tarefa">
+		<h:form id="frmTarefa">
+			<p:growl id="growl" showDetail="true" sticky="true" />  
+			<p:panelGrid columns="2" layout="flex" columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4"
+				contentStyleClass="p-align-baseline ui-fluid">
+				<div class="ui-grid ui-grid-responsive">
+					<div class="ui-grid-col-3">
+						<p:outputLabel value="Título: " />
+					</div>
+					<div class="ui-grid-col-9">
+						<p:inputText value="#{tarefasController.tarefas.titulo}" required="true" />
+					</div>
+					<div class="ui-grid-col-3">
+						<p:outputLabel value="Descrição: " />
+					</div>
+					<div class="ui-grid-col-9">
+						<p:inputTextarea value="#{tarefasController.tarefas.descricao}" required="true"/>
+					</div>
+					<div class="ui-grid-col-3">
+						<p:outputLabel value="Responsável: " />
+					</div>
+					<div class="ui-grid-col-3">
+						<p:selectOneMenu id="responsavel"
+							value="#{tarefasController.tarefas.responsavel}">
+							<f:selectItems value="#{tarefasController.responsavelOptionsMap}" />
+						</p:selectOneMenu>
+					</div>
+					<div class="ui-grid-col-3">
+						<p:outputLabel value="Prioridade: " />
+					</div>
+					<div class="ui-grid-col-3">
+						<p:selectOneMenu id="prioridade"
+							value="#{tarefasController.tarefas.prioridade}">
+							<f:selectItems value="#{tarefasController.prioridadeOptionsMap}" />
+						</p:selectOneMenu>
+					</div>
+					<div class="ui-grid-col-3">
+						<p:outputLabel value="Deadline: " />
+					</div>
+					<div class="ui-grid-col-2">
+						<p:calendar value="#{tarefasController.tarefas.deadline}"
+							pattern="dd/mm/yyyy HH:mm" required="true" />
+					</div>
+					<div class="ui-grid-col-12">
+						<div class="ui-grid-col-3">
+							<p:commandButton actionListener="#{tarefasController.salvar}"
+								value="Cadastrar" update="growl" >
+								<f:ajax execute="frmTarefa" render="frmTarefa"/>	
+							</p:commandButton>
+						</div>
+					</div>
+				</div>
+			</p:panelGrid>
+		</h:form>
+	</p:fieldset>
+</h:body>
+</html>
