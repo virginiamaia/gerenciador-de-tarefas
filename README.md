@@ -41,7 +41,8 @@ INSERT INTO tarefas (titulo, descricao, responsavel, prioridade, deadline) VALUE
   
   ('Tarefa2', 'desc2', 'responsavel2', 'prioridade2', TO_DATE('17-09-2012', 'dd-MM-yyyy')),
   
-  ('Tarefa3', 'desc3', 'responsavel3', 'prioridade3', TO_DATE('17-09-2012', 'dd-MM-yyyy')); ```
+  ('Tarefa3', 'desc3', 'responsavel3', 'prioridade3', TO_DATE('17-09-2012', 'dd-MM-yyyy')); 
+  ``` 
   
   
 Clicar com o botão direito do mouse no arquivo ``src/main/java/com.sistema.gerenciador.GerenciadorDeTarefasApplication`` e executar como Java Application
